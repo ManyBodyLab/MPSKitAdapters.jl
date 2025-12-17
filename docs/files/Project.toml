@@ -1,0 +1,5 @@
+[deps]
+MPSKitAdapters = "b5e06e08-62aa-43f0-8b15-6fe7988891e8"
+
+[compat]
+MPSKitAdapters = "0.1"

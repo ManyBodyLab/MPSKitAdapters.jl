@@ -1,0 +1,14 @@
+[deps]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+MPSKitAdapters = "b5e06e08-62aa-43f0-8b15-6fe7988891e8"
+SafeTestsets = "1bc83da4-3b8d-516f-aca4-4fe02f6d838f"
+Suppressor = "fd094767-a336-5f1f-9728-57cf17d0bbfb"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+TestExtras = "5ed8adda-3752-4e41-b88a-e8b09835ee3a"
+
+[compat]
+Aqua = "0.8"
+MPSKitAdapters = "0.1"
+SafeTestsets = "0.1"
+Suppressor = "0.2"
+Test = "1.10"

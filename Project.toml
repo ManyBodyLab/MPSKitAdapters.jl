@@ -1,0 +1,7 @@
+name = "MPSKitAdapters"
+uuid = "b5e06e08-62aa-43f0-8b15-6fe7988891e8"
+authors = ["Andreas Feuerpfeil <development@manybodylab.com>"]
+version = "0.1.0"
+
+[compat]
+julia = "1.10"
