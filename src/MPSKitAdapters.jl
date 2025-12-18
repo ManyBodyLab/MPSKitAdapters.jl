@@ -3,4 +3,7 @@ Lightweight adapter package providing seamless conversions between MPSKit.jl and
 """
 module MPSKitAdapters
 
+using TensorKitAdapters, TensorKit
+using BlockTensorKit
+
 end

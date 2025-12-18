@@ -10,9 +10,9 @@
 |:-----------------:|:-----------------------------:|:------------:|:-------------:|
 | [![][docs-stable-img]][docs-stable-url] [![][docs-dev-img]][docs-dev-url] | [![DOI][doi-img]][doi-url] | | [![Downloads][downloads-img]][downloads-url] -->
 
-| **Build Status** | **PkgEval** | **Coverage** | **Style Guide** | **Quality assurance** |
-|:----------------:|:-----------:|:------------:|:---------------:|:---------------------:|
-| [![CI][ci-img]][ci-url] | [![PkgEval][pkgeval-img]][pkgeval-url] | [![Codecov][codecov-img]][codecov-url] | [![code style: runic][codestyle-img]][codestyle-url] | [![Aqua QA][aqua-img]][aqua-url] |
+| **Build Status** |**Coverage** | **Style Guide** | **Quality assurance** |
+|:----------------:|:------------:|:---------------:|:---------------------:|
+| [![CI][ci-img]][ci-url] | [![Codecov][codecov-img]][codecov-url] | [![code style: runic][codestyle-img]][codestyle-url] | [![Aqua QA][aqua-img]][aqua-url] |
 
 [docs-stable-img]: https://img.shields.io/badge/docs-stable-blue.svg
 [docs-stable-url]: https://manybodylab.github.io/MPSKitAdapters.jl/stable
@@ -41,6 +41,7 @@
 [codestyle-img]: https://img.shields.io/badge/code_style-%E1%9A%B1%E1%9A%A2%E1%9A%BE%E1%9B%81%E1%9A%B2-black
 [codestyle-url]: https://github.com/fredrikekre/Runic.jl
 
+`MPSKitAdapters.jl` provides adapters to convert between the `AbstractMPS` and `AbstractMPO` types of [`MPSKit.jl`](https://github.com/QuantumKitHub/MPSKit.jl) and other tensor libraries like [`ITensorMPS.jl`](https://github.com/ITensor/ITensorMPS.jl) or [`ITensorIMPS.jl`](https://github.com/ManyBodyLab/ITensorIMPS.jl).
 
 ## Installation
 
@@ -50,14 +51,18 @@ The package is not yet registered in the Julia general registry. It can be insta
 pkg> add git@github.com:ManyBodyLab/MPSKitAdapters.jl.git
 ```
 
-<!-- ## Citation
-
-See "Cite this repository" to the right or [`CITATION.cff`](CITATION.cff) for the relevant reference(s). -->
-
 ## Code Samples
 
 ```julia
-julia> using MPSKitAdapters
+julia> using MPSKitAdapters, MPSKit, ITensorMPS
+julia> mps_it = random_mps(siteinds("S=1/2", 10); linkdims=10);
+julia> mps_mk = FiniteMPS(mps_it);
+julia> mps_it_reconstructed = MPS(mps_mk);
+julia> mps_mk_reconstructed = FiniteMPS(mps_it_reconstructed);
+julia> mps_it ≈ mps_it_reconstructed
+true 
+julia> mps_mk ≈ mps_mk_reconstructed 
+true
 ```
 
 ## License

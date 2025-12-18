@@ -3,12 +3,27 @@ Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
 MPSKitAdapters = "b5e06e08-62aa-43f0-8b15-6fe7988891e8"
 SafeTestsets = "1bc83da4-3b8d-516f-aca4-4fe02f6d838f"
 Suppressor = "fd094767-a336-5f1f-9728-57cf17d0bbfb"
+TensorKit = "07d1fe3e-3e46-537d-9eac-e9e13d0d4cec"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 TestExtras = "5ed8adda-3752-4e41-b88a-e8b09835ee3a"
+ITensorIMPS = "b6633aba-3a78-4a21-8473-2785f157d1a4"
+ITensorMPS = "0d1a4710-d33b-49a5-8f18-73bdf49b47e2"
+ITensors = "9136182c-28ba-11e9-034c-db9fb085ebd5"
+MPSKit = "bb1c41ca-d63c-52ed-829e-0820dda26502"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+
+[sources]
+ITensorIMPS = {rev = "main", url = "git@github.com:ManyBodyLab/ITensorIMPS.jl.git"}
 
 [compat]
 Aqua = "0.8"
+ITensorIMPS = "0.1.0"
+ITensorMPS = "0.3.25"
+ITensors = "0.9.15"
+LinearAlgebra = "1.11.0"
 MPSKitAdapters = "0.1"
+MPSKit = "0.13.8"
+TensorKit = "0.15.3"
 SafeTestsets = "0.1"
 Suppressor = "0.2"
 Test = "1.10"
