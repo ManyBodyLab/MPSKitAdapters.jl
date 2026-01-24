@@ -66,7 +66,7 @@ function ITensors.ITensor(t::MPSKit.JordanMPOTensor, pos::Integer, N::Integer = 
         intermediate = flip(t[i...],(1,4);inv=true)
         intermediate = TensorKit.permute(intermediate, ((1, 3, 2, 4), ()))
 
-        T = ITensor(intermediate; tags=tags, ids=ids, plevs=plevs, qn_names=qn_names)
+        T = ITensor(intermediate; tags=tags, ids=ids, plevs=plevs, kwargs...)
         ind = inds(T)
 
         i_kept = i[kept_dims]

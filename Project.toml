@@ -22,12 +22,12 @@ ITensorMPSExt = ["ITensorMPS", "ITensors", "MPSKit"]
 TensorKitAdapters = {rev = "main", url = "git@github.com:ManyBodyLab/TensorKitAdapters.jl.git"}
 
 [compat]
-BlockTensorKit = "0.3.1"
+BlockTensorKit = "0.3"
 ITensorIMPS = "0.1.0"
 ITensorMPS = "0.3.25"
 ITensors = "0.9.15"
 MPSKit = "0.13.8"
-TensorKit = "0.15.3"
+TensorKit = "0.15.3,0.16"
 TensorKitAdapters = "0.1.0"
 julia = "1.10"
 
