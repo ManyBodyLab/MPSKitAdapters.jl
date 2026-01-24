@@ -29,7 +29,7 @@ ITensorMPS = "0.3.25"
 ITensors = "0.9.15"
 MPSKit = "0.13.8"
 TensorKit = "0.15.3, 0.16"
-TensorKitAdapters = "0.1.0"
+TensorKitAdapters = "0.1.0,0.2.0"
 julia = "1.10"
 
 [extras]
