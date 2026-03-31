@@ -17,8 +17,11 @@ function MPSKit.MPOTensor(Osrc::ITensors.ITensor)
     O_tm = TensorKit.permute(TensorMap(Osrc), ((1, 3), (2, 4)))
 
     # canonicalize arrows
-    for i in 1:4
-        isdual(space(O_tm, i)) && (O_tm = flip(O_tm, i))
+    for (i, c) in enumerate(codomain(O_tm))
+        isdual(c) && (O_tm = flip(O_tm, i))
+    end
+    for (i, c) in enumerate(domain(O_tm))
+        isdual(c) && (O_tm = flip(O_tm, i))
     end
     return O_tm
 end
