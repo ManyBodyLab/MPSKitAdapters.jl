@@ -1,5 +1,5 @@
 
-function MPSKit.InfinitePeriodicMPS(mps::ITensorIMPS.InfiniteMPS, translator=x->x[1])
+function MPSKitPeriodic.InfinitePeriodicMPS(mps::ITensorIMPS.InfiniteMPS, translator=x->x[1])
     return MPSKitPeriodic.InfinitePeriodicMPS(PeriodicVector(mps.data.data, translator))
 end
 
