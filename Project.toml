@@ -39,3 +39,4 @@ julia = "1.10"
 
 [extras]
 ITensorIMPS = "b6633aba-3a78-4a21-8473-2785f157d1a4"
+MPSKitPeriodic = "313d436b-ab7d-46bc-ba98-5aa21a465bad"
