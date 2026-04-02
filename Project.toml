@@ -21,6 +21,7 @@ TensorKitAdapters = {rev = "main", url = "git@github.com:ManyBodyLab/TensorKitAd
 MPSKitPeriodic = {rev = "main", url = "git@github.com:ManyBodyLab/MPSKitPeriodic.jl.git"}
 
 [extensions]
+ITensorsExt = ["ITensors", "MPSKit"]
 ITensorIMPSExt = ["ITensorIMPS", "ITensors", "MPSKit"]
 ITensorMPSExt = ["ITensorMPS", "ITensors", "MPSKit"]
 MPSKitPeriodicITensorExt = ["ITensorIMPS", "ITensors", "MPSKit", "MPSKitPeriodic"]
