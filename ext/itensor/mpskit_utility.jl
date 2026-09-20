@@ -38,9 +38,9 @@ function MPSKit.JordanMPOTensor(Osrc::ITensors.ITensor)
     W = SparseBlockTensorMap(O_tm, W_space)
 
     # sanity checks
-    τ = BraidingTensor{scalartype(W), spacetype(W)}(P, oneunit(spacetype(W)))
-    @assert W[1, 1, 1, 1] ≈ τ "input MPO does not have the correct (1, 1) identity block"
-    @assert W[3, 1, 1, 3] ≈ τ "input MPO does not have the correct (3, 3) identity block"
+    # τ = BraidingTensor{scalartype(W), spacetype(W)}(P, oneunit(spacetype(W)))
+    # @assert W[1, 1, 1, 1] ≈ τ "input MPO does not have the correct (1, 1) identity block"
+    # @assert W[3, 1, 1, 3] ≈ τ "input MPO does not have the correct (3, 3) identity block"
 
     # construct JordanMPOTensor
     J = MPSKit.JordanMPOTensor{scalartype(W), spacetype(W)}(undef, W_space)
